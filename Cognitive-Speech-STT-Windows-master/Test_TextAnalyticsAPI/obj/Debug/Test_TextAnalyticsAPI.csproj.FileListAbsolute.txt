@@ -1,0 +1,14 @@
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Test_TextAnalyticsAPI.exe.config
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Test_TextAnalyticsAPI.exe
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Test_TextAnalyticsAPI.pdb
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Azure.CognitiveServices.Language.dll
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Azure.CognitiveServices.Language.xml
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\obj\Debug\Test_TextAnalyticsAPI.csprojResolveAssemblyReference.cache
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\obj\Debug\Test_TextAnalyticsAPI.exe
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\Test_TextAnalyticsAPI\obj\Debug\Test_TextAnalyticsAPI.pdb

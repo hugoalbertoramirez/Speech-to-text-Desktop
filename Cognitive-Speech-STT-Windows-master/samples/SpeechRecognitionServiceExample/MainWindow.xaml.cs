@@ -23,6 +23,7 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
     using System.IO.IsolatedStorage;
     using System.Runtime.CompilerServices;
     using System.Windows;
+    using System.Threading;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -38,8 +39,8 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
 
         public MainWindow()
         {
-            this.InitializeComponent();
-            this.Initialize();
+            InitializeComponent();
+            Initialize();
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
@@ -177,17 +178,17 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
         /// </summary>
         private void Initialize()
         {
-            this.IsMicrophoneClientShortPhrase = true;
-            this.IsMicrophoneClientWithIntent = false;
-            this.IsMicrophoneClientDictation = false;
-            this.IsDataClientShortPhrase = false;
-            this.IsDataClientWithIntent = false;
-            this.IsDataClientDictation = false;
+            IsMicrophoneClientShortPhrase = true;
+            IsMicrophoneClientWithIntent = false;
+            IsMicrophoneClientDictation = false;
+            IsDataClientShortPhrase = false;
+            IsDataClientWithIntent = false;
+            IsDataClientDictation = false;
 
             // Set the default choice for the group of checkbox.
-            this._micRadioButton.IsChecked = true;
+            _micRadioButton.IsChecked = true;
 
-            this.SubscriptionKey = this.GetSubscriptionKeyFromIsolatedStorage();
+            SubscriptionKey = GetSubscriptionKeyFromIsolatedStorage();
 
             // Create a client for text analysis.
             clientTextAnalytics = new TextAnalyticsAPI();
@@ -549,9 +550,19 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
             if (e.PartialResult != null && e.PartialResult.Split(separator).Length == 1)
             {
                 //this.WriteLine("--- Partial result received by OnPartialResponseReceivedHandler() ---");
-                WriteLine();
                 WriteLine("{0}", aux);
-                WriteLine();
+
+                if (!string.IsNullOrWhiteSpace(aux))
+                {
+                    SentimentBatchResult result = clientTextAnalytics.Sentiment(
+                        new MultiLanguageBatchInput(
+                            new List<MultiLanguageInput>()
+                            {
+                                new MultiLanguageInput("es", "0", aux),
+                            }));
+                    WriteLine("Score: {0:0.000}", result.Documents[0].Score);
+                    Thread.Sleep(2000);
+                }
             }
             
             aux = e.PartialResult;
