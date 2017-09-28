@@ -10,7 +10,8 @@ namespace Test_TextAnalyticsAPI
         static void Main(string[] args)
         {
             // SentimentAnalysis();
-            KeyPhrasesExtraction();
+            // KeyPhrasesExtraction();
+            LanguageExtraction();
         }
 
         private static void SentimentAnalysis()
@@ -76,6 +77,34 @@ namespace Test_TextAnalyticsAPI
                 {
                     Console.WriteLine("\t\t" + keyphrase);
                 }
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void LanguageExtraction()
+        {
+            // Create a client.
+            ITextAnalyticsAPI client = new TextAnalyticsAPI();
+            client.AzureRegion = AzureRegions.Westcentralus;
+            client.SubscriptionKey = "9c0bc0190edf451fa24029d7c2419210";
+
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            LanguageBatchResult result = client.DetectLanguage(
+                    new BatchInput(
+                        new List<Input>()
+                        {
+                          //new Input("1", "This is a document written in English."),
+                          //new Input("2", "Este es un document escrito en Español."),
+                          //new Input("3", "这是一个用中文写的文件")
+                          new Input("2", "Este es un document escrito en Español."),
+                        }));
+
+            // Printing language results.
+            foreach (var document in result.Documents)
+            {
+                Console.WriteLine("Document ID: {0} , Language: {1}", document.Id, document.DetectedLanguages[0].Iso6391Name);
             }
 
             Console.ReadLine();
