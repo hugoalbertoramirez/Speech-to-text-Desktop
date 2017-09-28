@@ -8,6 +8,9 @@
 //Key 1: 9c0bc0190edf451fa24029d7c2419210
 //Key 2: 9ec07ae867eb486cb6593e2dfe9fdca2
 
+// You must have a Cognitive Services API account with Text Analytics API.
+// You can use the free tier for 5,000 transactions/month to complete this quickstart.
+
 namespace Microsoft.CognitiveServices.SpeechRecognition
 {
     
@@ -24,6 +27,7 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
     using System.Runtime.CompilerServices;
     using System.Windows;
     using System.Threading;
+    using System.Linq;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -549,18 +553,33 @@ namespace Microsoft.CognitiveServices.SpeechRecognition
         {
             if (e.PartialResult != null && e.PartialResult.Split(separator).Length == 1)
             {
-                //this.WriteLine("--- Partial result received by OnPartialResponseReceivedHandler() ---");
                 WriteLine("{0}", aux);
 
                 if (!string.IsNullOrWhiteSpace(aux))
                 {
+                    // Score analysis:
                     SentimentBatchResult result = clientTextAnalytics.Sentiment(
                         new MultiLanguageBatchInput(
                             new List<MultiLanguageInput>()
                             {
                                 new MultiLanguageInput("es", "0", aux),
                             }));
-                    WriteLine("Score: {0:0.000}", result.Documents[0].Score);
+                    WriteLine("\t\t      Score: {0:0.000}", result.Documents[0].Score);
+
+                    // Key phrases extraction:
+                    KeyPhraseBatchResult result2 = clientTextAnalytics.KeyPhrases(
+                    new MultiLanguageBatchInput(
+                       new List<MultiLanguageInput>()
+                       {
+                          new MultiLanguageInput("es", "0", aux)
+                       }));
+
+                    WriteLine("\t\tKey Phrases: ");
+                    foreach (var d in result2.Documents[0].KeyPhrases)
+                    {
+                        WriteLine("\t\t {0}", d);
+                    }
+
                     Thread.Sleep(2000);
                 }
             }
