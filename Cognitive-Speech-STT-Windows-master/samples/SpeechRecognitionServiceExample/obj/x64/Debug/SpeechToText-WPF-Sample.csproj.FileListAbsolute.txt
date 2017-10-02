@@ -44,3 +44,7 @@ C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Wi
 C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.g.resources
 C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.exe
 C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechToText-WPF-Sample.exe.manifest
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechToText-WPF-Sample.application
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.exe.manifest
+C:\Users\Hugo Ramirez\Desktop\Git\Speech-to-text-Desktop\Cognitive-Speech-STT-Windows-master\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.application
